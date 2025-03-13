@@ -1,0 +1,73 @@
+/* App container */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header styles */
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.app-header p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Components container - side by side layout */
+.components-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .components-container {
+    flex-direction: column;
+  }
+}
+
+/* Individual component sections */
+.component-section {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.component-section h2 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Component display area */
+.component-display {
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  padding: 1.5rem;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Specific section styling */
+.goal-section h2 {
+  color: #2c7be5;
+}
+
+.attempt-section h2 {
+  color: #e63757;
+}

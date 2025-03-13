@@ -1,0 +1,24 @@
+# Cursor Rules Configuration
+
+# Activation toggle (YES/NO)
+ACTIVATED=YES
+
+# When activated, only allow editing of attempt component files
+if [ "$ACTIVATED" = "YES" ]; then
+    # Whitelist specific files that can be edited
+    allow_edit src/Attempt/AttemptComponent.tsx
+    allow_edit src/Attempt/AttemptComponent.css
+    
+    # Block editing of all other files
+    deny_edit **/*
+else
+    # When not activated, allow editing all files
+    allow_edit **/*
+fi
+
+# Always prevent editing of certain critical files
+deny_edit package.json
+deny_edit package-lock.json
+deny_edit tsconfig.json
+deny_edit vite.config.ts
+deny_edit .cursorrules 
